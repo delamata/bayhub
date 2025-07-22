@@ -50,7 +50,7 @@
       </div>
     </section>
 
-    <section class="formulario">
+  <!-- <section class="formulario">
       <h2>Reservar um Espaço</h2>
       <form action="#" method="POST">
         <input type="text" name="nome" placeholder="Nome completo" required>
@@ -63,7 +63,32 @@
         <input type="date" name="data" required>
         <button type="submit">Solicitar Reserva</button>
       </form>
-    </section>
+    </section> -->
+    
+<section class="formulario">
+  <h2>Reservar um Espaço</h2>
+  <form action="https://formsubmit.co/contato@bayhub.com.br" method="POST">
+    <input type="text" name="nome" placeholder="Nome completo" required>
+    <input type="email" name="email" placeholder="E-mail" required>
+    
+    <select name="espaco" required>
+      <option value="">Espaço de reserva</option>
+      <option value="Sala de Reunião">Sala de Reunião</option>
+      <option value="Auditório Bayhub">Auditório Bayhub</option>
+    </select>    
+    <input type="date" name="data" required>    
+    <!-- Proteção contra bots -->
+    <input type="text" name="_honey" style="display:none">    
+    <!-- Não redireciona para captcha -->
+    <input type="hidden" name="_captcha" value="false">
+    
+    <!-- Página de sucesso após envio -->
+    <input type="hidden" name="_next" value="https://delamata.github.io/obrigado.html">
+    
+    <button type="submit">Solicitar Reserva</button>
+  </form>
+</section>
+
 
     <section class="sobre-contato">
       <div>
