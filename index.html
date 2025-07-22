@@ -28,12 +28,19 @@
         <section class="formulario">
             <h2>Faça sua Reserva</h2>
             <form action="mailto:contato@bayhub.com.br" method="POST" enctype="text/plain">
-                <input type="text" name="nome" placeholder="Nome" required>
-                <input type="email" name="email" placeholder="E-mail" required>
-                <input type="text" name="data" placeholder="Data desejada" required>
-                <textarea name="mensagem" placeholder="Mensagem"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+    <input type="text" name="nome" placeholder="Nome" required>
+    <input type="email" name="email" placeholder="E-mail" required>
+    <input type="text" name="data" placeholder="Data desejada" required>
+
+    <select name="sala" required>
+        <option value="" disabled selected>Selecione a sala desejada</option>
+        <option value="Sala de reunião (12 pessoas)">Sala de reunião (12 pessoas)</option>
+        <option value="Auditório (100 pessoas)">Auditório (100 pessoas)</option>
+    </select>
+
+    <textarea name="mensagem" placeholder="Mensagem"></textarea>
+    <button type="submit">Enviar</button>
+</form> 
         </section>
         <footer>
             <p>Rua Comendador João Lucas, 101 - Salas 6/8 - Distrito Industrial - Vinhedo - São Paulo</p>
