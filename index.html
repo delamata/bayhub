@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayhub - Espaços Premium</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Bayhub">
+        </div>
+    </header>
+    <main>
+        <h1>Reserve uma Sala</h1>
+        <div class="salas">
+            <div class="sala">
+                <img src="images/sala_comercial.jpg" alt="Sala Comercial">
+                <p>Sala Comercial para 12 pessoas com cafeteira e frigobar</p>
+            </div>
+            <div class="sala">
+                <img src="images/sala_evento.jpg" alt="Espaço para Eventos">
+                <p>Espaço para eventos até 100 pessoas com tela de projeção e TV</p>
+            </div>
+        </div>
+        <section class="formulario">
+            <h2>Faça sua Reserva</h2>
+            <form action="mailto:contato@bayhub.com.br" method="POST" enctype="text/plain">
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="text" name="data" placeholder="Data desejada" required>
+                <textarea name="mensagem" placeholder="Mensagem"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        <footer>
+            <p>Rua Comendador João Lucas, 101 - Salas 6/8 - Distrito Industrial - Vinhedo - São Paulo</p>
+        </footer>
+    </main>
+</body>
+</html>

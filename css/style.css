@@ -1,0 +1,62 @@
+
+body {
+    font-family: 'Gotham', sans-serif;
+    background-color: #17303C;
+    color: #F4F2EE;
+    margin: 0;
+    padding: 0;
+}
+
+header .logo img {
+    height: 80px;
+    margin: 20px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #FB902C;
+}
+
+.salas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.sala img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+input, textarea {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #FB902C;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+}
