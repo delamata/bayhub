@@ -27,32 +27,29 @@
         </div>
         <section class="formulario">
             <h2>Faça sua Reserva</h2>
-           <form action="https://formsubmit.co/contato@bayhub.com.br" method="POST">
+          </section>
+        <form action="https://formsubmit.co/contato@bayhub.com.br" method="POST" class="form-reserva">
     <!-- Anti-spam honeypot -->
     <input type="text" name="_honey" style="display:none">
-
-    <!-- Desativa captcha do Formsubmit -->
     <input type="hidden" name="_captcha" value="false">
-
-    <!-- Redirecionamento após envio -->
     <input type="hidden" name="_next" value="https://delamata.github.io/bayhub-site/obrigado.html">
-        <!-- Checkboxes para salas -->
-    <label>Selecione a(s) sala(s):</label><br>
-    <label><input type="checkbox" name="sala[]" value="Sala de reunião (12 pessoas)"> Sala de reunião (12 pessoas)</label><br>
-    <label><input type="checkbox" name="sala[]" value="Auditório (100 pessoas)"> Auditório (100 pessoas)</label><br>
+
+    <div class="form-group">
+        <label>Selecione a(s) sala(s):</label>
+        <label><input type="checkbox" name="sala[]" value="Sala de reunião (12 pessoas)"> Sala de reunião (12 pessoas)</label>
+        <label><input type="checkbox" name="sala[]" value="Auditório (100 pessoas)"> Auditório (100 pessoas)</label>
+    </div>
+
     <input type="text" name="nome" placeholder="Nome" required>
     <input type="email" name="email" placeholder="E-mail" required>
-     
-    <!-- Calendário -->
+
     <label for="data">Data desejada:</label>
     <input type="date" name="data" id="data" required>
 
-
-    <textarea name="mensagem" placeholder="Mensagem"></textarea>
+    <textarea name="mensagem" placeholder="Mensagem" rows="4"></textarea>
     <button type="submit">Enviar</button>
-</form>
-        </section>
-        <footer>
+        </form>
+<footer>
             <p>Rua Comendador João Lucas, 101 - Salas 6/8 - Distrito Industrial - Vinhedo - São Paulo</p>
         </footer>
     </main>
