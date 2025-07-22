@@ -60,3 +60,43 @@ footer {
     margin-top: 40px;
     font-size: 0.9em;
 }
+.form-reserva {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.form-reserva input[type="text"],
+.form-reserva input[type="email"],
+.form-reserva input[type="date"],
+.form-reserva textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+.form-reserva label {
+    align-self: flex-start;
+    margin-top: 10px;
+    color: #F4F2EE;
+}
+.form-group {
+    width: 100%;
+    text-align: left;
+}
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 10px;
+}
+button {
+    background-color: #FB902C;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
