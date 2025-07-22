@@ -28,26 +28,28 @@
         <section class="formulario">
             <h2>Faça sua Reserva</h2>
           </section>
-        <form action="https://formsubmit.co/contato@bayhub.com.br" method="POST" class="form-reserva">
-    <!-- Anti-spam honeypot -->
-    <input type="text" name="_honey" style="display:none">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://delamata.github.io/bayhub-site/obrigado.html">
+       <form action="https://formsubmit.co/contato@bayhub.com.br" method="POST" class="form-reserva">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://delamata.github.io/bayhub-site/obrigado.html">
 
-    <div class="form-group">
-        <label>Selecione a(s) sala(s):</label><br>
-        <label><input type="checkbox" name="sala[]" value="Sala de reunião (12 pessoas)"> Sala de reunião (12 pessoas)</label><br>
-        <label><input type="checkbox" name="sala[]" value="Auditório (100 pessoas)"> Auditório (100 pessoas)</label><br>
-    </div>
+                <div class="form-group">
+                    <label>Selecione a(s) sala(s):</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="sala[]" value="Sala de reunião (12 pessoas)"> Sala de reunião (12 pessoas)</label>
+                        <label><input type="checkbox" name="sala[]" value="Auditório (100 pessoas)"> Auditório (100 pessoas)</label>
+                    </div>
+                </div>
 
-    <input type="text" name="nome" placeholder="Nome" required><br>
-    <input type="email" name="email" placeholder="E-mail" required><br>
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="email" name="email" placeholder="E-mail" required>
 
-    <label for="data">Data desejada:</label>
-    <input type="date" name="data" id="data" required><br>
-    <textarea name="mensagem" placeholder="Mensagem" rows="4"></textarea><br>
-    <button type="submit">Enviar</button>
-        </form>
+                <label for="data">Data desejada:</label>
+                <input type="date" name="data" id="data" required>
+
+                <textarea name="mensagem" placeholder="Mensagem" rows="4"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
 <footer>
             <p>Rua Comendador João Lucas, 101 - Salas 6/8 - Distrito Industrial - Vinhedo - São Paulo</p>
         </footer>
