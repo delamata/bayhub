@@ -2,25 +2,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NW7LBBCH');</script>
-<!-- End Google Tag Manager -->
-  
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NW7LBBCH');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bayhub – Espaços Elegantes</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      cursor: zoom-out;
+    }
+    .popup-conteudo {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 8px;
+    }
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW7LBBCH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW7LBBCH"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <header>
     <img src="images/logo1.PNG" alt="Logo Bayhub" class="logo">
   </header>
@@ -35,60 +63,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2>Nossos Espaços</h2>
       <div class="cards">
         <div class="card">
-          <img src="images/recepcao1.png" alt="Recepção">
+          <img src="images/recepcao1.png" alt="Recepção" class="img-popup" onclick="abrirPopup(this)">
           <h3>Recepção</h3>
           <p>Conforto e comodidade para seus convidados</p>
         </div>
         <div class="card">
-          <img src="images/sala_reunião.png" alt="Sala de Reunião">
+          <img src="images/sala_reunião.png" alt="Sala de Reunião" class="img-popup" onclick="abrirPopup(this)">
           <h3>Sala de Reunião</h3>
           <p>Espaço para até 12 pessoas com conforto e comodidade</p>
         </div>
         <div class="card">
-          <img src="images/auditorio.png" alt="Auditório Bayhub">
+          <img src="images/auditorio.png" alt="Auditório Bayhub" class="img-popup" onclick="abrirPopup(this)">
           <h3>Auditório Bayhub</h3>
           <p>Até 100 pessoas, acústica, iluminação e telão</p>
         </div>
       </div>
     </section>
 
-   <!-- <section class="formulario">
+    <section class="formulario">
       <h2>Reservar um Espaço</h2>
-      <form action="#" method="POST">
+      <form action="https://formsubmit.co/contato@bayhub.com.br" method="POST">
         <input type="text" name="nome" placeholder="Nome completo" required>
         <input type="email" name="email" placeholder="E-mail" required>
         <select name="espaco" required>
           <option value="">Espaço de reserva</option>
-          <option value="sala1">Sala de Reunião 1</option>
-          <option value="sala2">Sala de Reunião 2</option>
-          <option value="auditorio">Auditório Bayhub</option>
+          <option value="Sala de Reunião">Sala de Reunião</option>
+          <option value="Auditório Bayhub">Auditório Bayhub</option>
         </select>
         <input type="date" name="data" required>
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://seusite.github.io/obrigado.html">
         <button type="submit">Solicitar Reserva</button>
       </form>
-    </section> -->
-<section class="formulario">
-  <h2>Reservar um Espaço</h2>
-  <form action="https://formsubmit.co/contato@bayhub.com.br" method="POST">
-    <input type="text" name="nome" placeholder="Nome completo" required>
-    <input type="email" name="email" placeholder="E-mail" required>
-    
-    <select name="espaco" required>
-      <option value="">Espaço de reserva</option>
-      <option value="Sala de Reunião">Sala de Reunião</option>
-      <option value="Auditório Bayhub">Auditório Bayhub</option>
-    </select> 
-    <input type="date" name="data" required>
-   <!-- Proteção contra bots -->
-    <input type="text" name="_honey" style="display:none">
-       <!-- Não redireciona para captcha -->
-    <input type="hidden" name="_captcha" value="false">
-       <!-- Página de sucesso após envio -->
-    <input type="hidden" name="_next" value="https://seusite.github.io/obrigado.html">
-       <button type="submit">Solicitar Reserva</button>
-  </form>
-</section>
-
+    </section>
 
     <section class="sobre-contato">
       <div>
@@ -102,5 +110,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
   </main>
+
+  <!-- Popup de Imagem -->
+  <div id="popup" class="popup" onclick="fecharPopup()">
+    <span class="close">&times;</span>
+    <img class="popup-conteudo" id="popup-img">
+  </div>
+
+  <script>
+    function abrirPopup(img) {
+      const popup = document.getElementById("popup");
+      const popupImg = document.getElementById("popup-img");
+      popup.style.display = "flex";
+      popupImg.src = img.src;
+    }
+    function fecharPopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
 </body>
 </html>
