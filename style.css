@@ -20,7 +20,7 @@ header {
 .hero {
   text-align: center;
   padding: 2em;
-  background-color: #256B4D;
+  background-color: #FB902C;
   color: white;
 }
 
@@ -80,6 +80,6 @@ button {
   display: flex;
   justify-content: space-around;
   padding: 2em;
-  background-color: #FB902C;
-  color: #17303C;
+  background-color: #256B4D;
+  color: white;
 }
