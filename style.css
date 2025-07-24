@@ -6,6 +6,11 @@ body {
   background-color: #F4F2EE;
   color: #17303C;
 }
+header {
+  background-color: #17303C;
+  padding: 10px;
+  text-align: center;
+}  
 .logo {
   height: 60px;
 }
@@ -15,6 +20,11 @@ body {
   background-color: #256B4D;
   color: white;
 }
+.spaces {
+  padding: 2em;
+  text-align: center;
+}
+
 .cards {
   display: flex;
   justify-content: space-around;
