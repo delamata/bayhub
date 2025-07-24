@@ -1,84 +1,69 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NW7LBBCH');</script>
-  <!-- End Google Tag Manager -->
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bayhub</title>
+  <title>Bayhub – Espaços Elegantes</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW7LBBCH"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <header class="hero-topo">
-    <img src="images/topo.png" alt="Logo Bayhub" class="logo">
-    <nav class="menu">
-      <a href="#reservas">Reservas</a>
-      <a href="#contato">Contato</a>
-    </nav>
-    <h1>Espaços Elegantes para Reuniões e Eventos</h1>
-    <p>Infraestrutura premium com alto padrão de conforto, privacidade e tecnologia.</p>
+  <header>
+    <img src="images/logo.png" alt="Logo Bayhub" class="logo">
   </header>
 
   <main>
+    <section class="hero">
+      <h1>Espaços Elegantes para Reuniões e Eventos</h1>
+      <p>Infraestrutura premium em São Caetano do Sul com alto padrão de conforto, privacidade e tecnologia.</p>
+    </section>
+
     <section class="spaces">
       <h2>Nossos Espaços</h2>
       <div class="cards">
         <div class="card">
-          <img src="images/recepcao1.png" alt="Sala de Reunião 1">
-          <h3>Recepção</h3>
-          <p>Conforto e comodidade para seus convidados</p>
+          <img src="images/sala_reuniao_1.jpg" alt="Sala de Reunião 1">
+          <h3>Sala de Reunião 1</h3>
+          <p>Capacidade para 6 pessoas, sofá, 55” Wifi</p>
         </div>
         <div class="card">
-          <img src="images/sala_reunião.png" alt="Sala de Reunião 2">
-          <h3>Sala de Reunião</h3>
-          <p>Espaço para até 12 pessoas</p>
+          <img src="images/sala_reuniao_2.jpg" alt="Sala de Reunião 2">
+          <h3>Sala de Reunião 2</h3>
+          <p>Estilo 8 pessoas + videoconferência confortável</p>
         </div>
         <div class="card">
-          <img src="images/auditorio.png" alt="Auditório Bayhub">
+          <img src="images/auditorio.jpg" alt="Auditório Bayhub">
           <h3>Auditório Bayhub</h3>
           <p>Até 100 pessoas, acústica, iluminação e telão</p>
         </div>
       </div>
     </section>
 
-    <section id="reservas" class="formulario">
+    <section class="formulario">
       <h2>Reservar um Espaço</h2>
-      <form action="https://formsubmit.co/contato@bayhub.com.br" method="POST">
+      <form action="#" method="POST">
         <input type="text" name="nome" placeholder="Nome completo" required>
         <input type="email" name="email" placeholder="E-mail" required>
         <select name="espaco" required>
           <option value="">Espaço de reserva</option>
-          <option value="Sala de Reunião">Sala de Reunião</option>
-          <option value="Auditório Bayhub">Auditório Bayhub</option>
+          <option value="sala1">Sala de Reunião 1</option>
+          <option value="sala2">Sala de Reunião 2</option>
+          <option value="auditorio">Auditório Bayhub</option>
         </select>
         <input type="date" name="data" required>
-        <input type="text" name="_honey" style="display:none">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://delamata.github.io/obrigado.html">
         <button type="submit">Solicitar Reserva</button>
       </form>
     </section>
 
-    <section id="contato" class="sobre-contato">
+    <section class="sobre-contato">
       <div>
         <h2>Sobre a Bayhub</h2>
         <p>A Bayhub oferece um ambiente refinado para empresas exigentes, com conforto, privacidade e imagem profissional.</p>
       </div>
       <div>
-        <h2>Entre em contato conosco</h2>
-        <p>(19) 99800-4060 – contato@bayhub.com.br<br>
-        Rua Comendador João Lucas, 101 - Salas 6/8 – Vinhedo, SP</p>
+        <h2>Contato</h2>
+        <p>(11) 99959-0000 – contato em bayhub@bayhub.com.br<br>
+        Av. Central, 125 – São Caetano do Sul, SP</p>
       </div>
     </section>
   </main>
