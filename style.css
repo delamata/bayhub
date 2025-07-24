@@ -1,85 +1,118 @@
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #F4F2EE;
-  color: #17303C;
-}
-
-header {
-  background-color: #17303C;
-  padding: 10px;
-  text-align: center;
-}
-
-.logo {
-  height: 250px;
-}
-
-.hero {
-  text-align: center;
-  padding: 2em;
-  background-color: #FB902C;
-  color: white;
-}
-
+/* Seção de espaços */
 .spaces {
-  padding: 2em;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
   text-align: center;
 }
 
 .cards {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
 }
 
 .card {
-  background-color: white;
-  border-radius: 8px;
-  padding: 1em;
-  width: 250px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card img {
   width: 100%;
-  border-radius: 5px;
+  height: auto;
 }
 
+.card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.2em;
+}
+
+.card p {
+  padding: 0 15px 20px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* Formulário de reservas */
 .formulario {
-  padding: 2em;
-  background-color: #F57426;
-  color: white;
+  padding: 60px 20px;
+  background-color: #fff;
   text-align: center;
 }
 
 .formulario form {
+  max-width: 500px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  max-width: 300px;
-  margin: 0 auto;
-  gap: 10px;
+  gap: 15px;
 }
 
-input, select, button {
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
+.formulario input,
+.formulario select,
+.formulario button {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
 }
 
-button {
-  background-color: #105333;
-  color: white;
-  cursor: pointer;
-}
-
-.sobre-contato {
-  display: flex;
-  justify-content: space-around;
-  padding: 2em;
+.formulario button {
   background-color: #256B4D;
   color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.formulario button:hover {
+  background-color: #1b513a;
+}
+
+/* Contato e sobre */
+.sobre-contato {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 60px 20px;
+  background-color: #f5f0eb;
+  color: #333;
+}
+
+.sobre-contato div {
+  max-width: 400px;
+}
+
+.sobre-contato h2 {
+  margin-bottom: 15px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sobre-contato {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
