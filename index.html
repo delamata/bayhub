@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,40 +8,14 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-NW7LBBCH');</script>
   <!-- End Google Tag Manager -->
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bayhub – Espaços Elegantes</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .popup {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-      cursor: zoom-out;
-    }
-    .popup-conteudo {
-      max-width: 80%;
-      max-height: 80%;
-      border-radius: 8px;
-    }
-    .popup .close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      color: #fff;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-  </style>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW7LBBCH"
@@ -56,24 +29,69 @@
   <main>
     <section class="hero">
       <h1>Espaços Elegantes para Reuniões e Eventos</h1>
-      <p>Infraestrutura premium em São Caetano do Sul com alto padrão de conforto, privacidade e tecnologia.</p>
+      <p>Infraestrutura premium em Vinhedo com alto padrão de conforto, privacidade e tecnologia.</p>
     </section>
 
     <section class="spaces">
       <h2>Nossos Espaços</h2>
+
       <div class="cards">
+        <!-- Recepção -->
         <div class="card">
-          <img src="images/recepcao1.png" alt="Recepção" class="img-popup" onclick="abrirPopup(this)">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track" data-track>
+              <!-- Se tiver apenas 1 foto, tudo bem (setas/dots somem automaticamente) -->
+              <img src="images/recepcao1.png" alt="Recepção 1" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
+              <!-- Se quiser voltar com as outras fotos, descomente:
+              <img src="images/recepcao2.png" alt="Recepção 2" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
+              <img src="images/recepcao3.png" alt="Recepção 3" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
+              <img src="images/recepcao4.png" alt="Recepção 4" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
+              -->
+            </div>
+
+            <button class="carousel-btn prev" type="button" data-prev aria-label="Imagem anterior">‹</button>
+            <button class="carousel-btn next" type="button" data-next aria-label="Próxima imagem">›</button>
+            <div class="carousel-dots" data-dots aria-label="Seleção de imagens"></div>
+          </div>
+
           <h3>Recepção</h3>
           <p>Conforto e comodidade para seus convidados</p>
         </div>
+
+        <!-- Sala de Reunião -->
         <div class="card">
-          <img src="images/sala_reunião.png" alt="Sala de Reunião" class="img-popup" onclick="abrirPopup(this)">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track" data-track>
+              <img src="images/sala_reuniao1.jpeg" alt="Sala de Reunião 1" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
+              <img src="images/sala_reuniao2.jpeg" alt="Sala de Reunião 2" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
+            </div>
+
+            <button class="carousel-btn prev" type="button" data-prev aria-label="Imagem anterior">‹</button>
+            <button class="carousel-btn next" type="button" data-next aria-label="Próxima imagem">›</button>
+            <div class="carousel-dots" data-dots aria-label="Seleção de imagens"></div>
+          </div>
+
           <h3>Sala de Reunião</h3>
           <p>Espaço para até 12 pessoas com conforto e comodidade</p>
         </div>
+
+        <!-- Auditório -->
         <div class="card">
-          <img src="images/auditorio.png" alt="Auditório Bayhub" class="img-popup" onclick="abrirPopup(this)">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track" data-track>
+              <img src="images/auditorio1.jpeg" alt="Auditório 1" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
+              <img src="images/auditorio2.jpeg" alt="Auditório 2" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
+              <img src="images/auditorio3.jpeg" alt="Auditório 3" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
+              <!-- Se tiver a 4ª foto, descomente e ajuste o nome:
+              <img src="images/auditorio4.jpeg" alt="Auditório 4" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
+              -->
+            </div>
+
+            <button class="carousel-btn prev" type="button" data-prev aria-label="Imagem anterior">‹</button>
+            <button class="carousel-btn next" type="button" data-next aria-label="Próxima imagem">›</button>
+            <div class="carousel-dots" data-dots aria-label="Seleção de imagens"></div>
+          </div>
+
           <h3>Auditório Bayhub</h3>
           <p>Até 100 pessoas, acústica, iluminação e telão</p>
         </div>
@@ -82,21 +100,59 @@
 
     <section class="formulario">
       <h2>Reservar um Espaço</h2>
+
       <form action="https://formsubmit.co/contato@bayhub.com.br" method="POST">
         <input type="text" name="nome" placeholder="Nome completo" required>
         <input type="email" name="email" placeholder="E-mail" required>
+
         <select name="espaco" required>
           <option value="">Espaço de reserva</option>
           <option value="Sala de Reunião">Sala de Reunião</option>
           <option value="Auditório Bayhub">Auditório Bayhub</option>
         </select>
+
+        <select name="montagem_sala" required>
+          <option value="">Selecionar a montagem da sala</option>
+          <option value='Sala em "U"'>Sala em "U"</option>
+          <option value="Espinha de Peixe">Espinha de Peixe</option>
+          <option value="Mesa Unica">Mesa Unica</option>
+        </select>
+
         <input type="date" name="data" required>
+
         <input type="text" name="_honey" style="display:none">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://seusite.github.io/obrigado.html">
+
         <button type="submit">Solicitar Reserva</button>
       </form>
     </section>
+    <section class="parceiros">
+  <h2>Nossos Parceiros</h2>
+
+  <div class="parceiros-grid">
+    <!-- Parceiro 1 -->
+    <a href="https://fazendabahia.com/" target="_blank" rel="noopener" class="parceiro">
+      <img src="images/logo-fazenda-bahia_novo-AVLzxjWn3zHpp9v4.avif" alt="Parceiro 1">
+    </a>
+
+    <!-- Parceiro 2 
+    <a href="https://www.parceiro2.com.br" target="_blank" rel="noopener" class="parceiro">
+      <img src="images/parceiro2.png" alt="Parceiro 2">
+    </a>  -->
+
+    <!-- Parceiro 3 
+    <a href="https://www.parceiro3.com.br" target="_blank" rel="noopener" class="parceiro">
+      <img src="images/parceiro3.png" alt="Parceiro 3">
+    </a> -->
+
+    <!-- Parceiro 4 
+    <a href="https://www.parceiro4.com.br" target="_blank" rel="noopener" class="parceiro">
+      <img src="images/parceiro4.png" alt="Parceiro 4">
+    </a>-->
+  </div>
+</section>
+
 
     <section class="sobre-contato">
       <div>
@@ -113,11 +169,12 @@
 
   <!-- Popup de Imagem -->
   <div id="popup" class="popup" onclick="fecharPopup()">
-    <span class="close">&times;</span>
-    <img class="popup-conteudo" id="popup-img">
+    <span class="close" aria-label="Fechar popup">&times;</span>
+    <img class="popup-conteudo" id="popup-img" alt="Imagem ampliada">
   </div>
 
   <script>
+    // ===== POPUP (Zoom) =====
     function abrirPopup(img) {
       const popup = document.getElementById("popup");
       const popupImg = document.getElementById("popup-img");
@@ -127,6 +184,82 @@
     function fecharPopup() {
       document.getElementById("popup").style.display = "none";
     }
+
+    // ===== CARROSSEIS (um por card) =====
+    function initCarousel(root) {
+      const track = root.querySelector("[data-track]");
+      const slides = Array.from(track.querySelectorAll("img"));
+      const btnPrev = root.querySelector("[data-prev]");
+      const btnNext = root.querySelector("[data-next]");
+      const dotsWrap = root.querySelector("[data-dots]");
+
+      if (!track || slides.length === 0) return;
+
+      let index = 0;
+
+      // limpar dots (evita duplicar se script rodar mais de 1 vez)
+      dotsWrap.innerHTML = "";
+
+      // criar dots
+      const dots = slides.map((_, i) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("aria-label", `Ir para imagem ${i + 1}`);
+        b.addEventListener("click", () => goTo(i));
+        dotsWrap.appendChild(b);
+        return b;
+      });
+
+      function update() {
+        track.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle("active", i === index));
+
+        const hasMany = slides.length > 1;
+        btnPrev.style.display = hasMany ? "block" : "none";
+        btnNext.style.display = hasMany ? "block" : "none";
+        dotsWrap.style.display = hasMany ? "flex" : "none";
+      }
+
+      function goTo(i) {
+        index = (i + slides.length) % slides.length;
+        update();
+      }
+
+      btnPrev.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        goTo(index - 1);
+      });
+
+      btnNext.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        goTo(index + 1);
+      });
+
+      // swipe (mobile)
+      let startX = null;
+      root.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+      }, { passive: true });
+
+      root.addEventListener("touchend", (e) => {
+        if (startX === null) return;
+        const endX = e.changedTouches[0].clientX;
+        const diff = endX - startX;
+        startX = null;
+
+        if (Math.abs(diff) > 40) {
+          diff > 0 ? goTo(index - 1) : goTo(index + 1);
+        }
+      }, { passive: true });
+
+      update();
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("[data-carousel]").forEach(initCarousel);
+    });
   </script>
 </body>
 </html>
