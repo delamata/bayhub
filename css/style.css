@@ -1,3 +1,22 @@
+/* =========================
+   Bayhub - style.css (novo)
+   Objetivos:
+   - Card + imagem como peça única (mesmo arredondamento)
+   - Carrossel 300x250 sem vazar
+   - Hover premium (levantar + leve zoom)
+   - Ajuste de CLS (aspect-ratio + altura reservada)
+   ========================= */
+
+/* ----- Reset básico ----- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -7,79 +26,441 @@ body {
   color: #17303C;
 }
 
+/* ----- Header ----- */
 header {
-  background-color: #17303C;
+  background-color: white;
   padding: 10px;
   text-align: center;
 }
 
 .logo {
   height: 60px;
+  width: auto;
+  display: inline-block;
 }
 
+/* ----- Hero ----- */
 .hero {
   text-align: center;
-  padding: 2em;
-  background-color: #256B4D;
+  padding: 2em 1em;
+  background-color: #17303C;
   color: white;
 }
 
+.hero h1 {
+  margin: 0 0 8px;
+}
+
+.hero p {
+  margin: 0;
+}
+
+/* ----- Seções ----- */
 .spaces {
-  padding: 2em;
+  padding: 2em 1em;
   text-align: center;
 }
 
+.spaces h2 {
+  margin: 0 0 20px;
+}
+
+/* ===== GRID dos Cards (melhor que flex para alinhamento) ===== */
 .cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+  gap: 22px;
+  justify-content: center;
+  align-items: start;
 }
 
+/* =========================
+   CARD (peça única)
+   ========================= */
 .card {
-  background-color: white;
-  border-radius: 8px;
-  padding: 1em;
-  width: 250px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  --radius: 14px;
+  width: 300px;
+  border-radius: var(--radius);
+  background: #fff;
+  overflow: hidden; /* faz imagem+card virarem UMA peça */
+  box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+  text-align: center;
+
+  /* CLS: reserve espaço interno e evite reflow */
+  contain: layout paint;
+  transform: translateZ(0);
+
+  transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
-.card img {
-  width: 100%;
-  border-radius: 5px;
+/* Hover premium */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
 }
 
+/* Conteúdo do card */
+.card h3 {
+  margin: 14px 12px 6px;
+  font-size: 18px;
+  color: #17303C;
+}
+
+.card p {
+  margin: 0 16px 16px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #2a2a2a;
+}
+
+/* =========================
+   CARROSSEL (300x250 fixo)
+   CLS: aspect-ratio reserva espaço
+   ========================= */
+.carousel {
+  position: relative;
+  width: 300px;
+  aspect-ratio: 6 / 5; /* 300x250 -> reserva altura e reduz CLS */
+  height: auto;
+  overflow: hidden;
+  background: #eae7e2; /* fallback enquanto carrega */
+}
+
+/* Trilho */
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 350ms ease;
+  will-change: transform;
+}
+
+/* Imagens do carrossel */
+.carousel-track img {
+  width: 300px;
+  height: 100%;
+  flex: 0 0 300px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+
+  /* CLS/perf: reserve tamanho + evite “pular” */
+  background: #eae7e2;
+
+  /* leve suavidade para hover */
+  transition: transform 220ms ease;
+}
+
+/* Zoom sutil na imagem ao passar o mouse no card */
+.card:hover .carousel-track img {
+  transform: scale(1.03);
+}
+
+/* Botões do carrossel */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 22px;
+  line-height: 34px;
+  cursor: pointer;
+  z-index: 2;
+
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.7);
+  transform: translateY(-50%) scale(1.04);
+}
+
+.carousel-btn.prev { left: 8px; }
+.carousel-btn.next { right: 8px; }
+
+/* Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  z-index: 2;
+}
+
+.carousel-dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(255,255,255,0.55);
+  cursor: pointer;
+}
+
+.carousel-dots button.active {
+  background: rgba(255,255,255,0.95);
+}
+
+/* Melhor UX: indica que é clicável */
+.img-popup {
+  cursor: zoom-in;
+}
+
+/* =========================
+   Formulário
+   ========================= */
 .formulario {
-  padding: 2em;
+  padding: 2em 1em;
   background-color: #F57426;
   color: white;
   text-align: center;
 }
 
+.formulario h2 {
+  margin: 0 0 14px;
+}
+
 .formulario form {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  max-width: 340px;
   margin: 0 auto;
   gap: 10px;
 }
 
 input, select, button {
-  padding: 10px;
+  padding: 10px 12px;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+input, select {
+  background: #fff;
+  color: #17303C;
 }
 
 button {
   background-color: #105333;
   color: white;
   cursor: pointer;
+  transition: transform 160ms ease, opacity 160ms ease;
 }
 
+button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+/* =========================
+   Sobre / Contato
+   ========================= */
 .sobre-contato {
-  display: flex;
-  justify-content: space-around;
-  padding: 2em;
-  background-color: #FB902C;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  padding: 2em 1em;
+  background-color: #17303C;
+  color: #F4F2EE;
+}
+
+.sobre-contato h2 {
+  margin: 0 0 10px;
+}
+
+.sobre-contato p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* =========================
+   Popup (zoom) - mantém o seu
+   ========================= */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+
+.popup-conteudo {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 12px;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* =========================
+   Responsivo
+   ========================= */
+@media (max-width: 380px) {
+  .card, .carousel, .carousel-track img {
+    width: 92vw;
+  }
+
+  .carousel {
+    aspect-ratio: 6 / 5; /* mantém proporção */
+  }
+
+  .carousel-track img {
+    flex: 0 0 92vw;
+  }
+}
+/* =========================================================
+   PATCH - Corrige: imagens empilhadas + setas verdes gigantes
+   Cole NO FINAL do style.css
+   ========================================================= */
+
+/* 1) Força o trilho do carrossel a ser horizontal */
+.carousel-track {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: stretch !important;
+  height: 100% !important;
+}
+
+/* 2) Reserva tamanho do carrossel (evita CLS e empilhamento) */
+.carousel {
+  width: 300px !important;
+  height: 250px !important;        /* garante altura fixa */
+  overflow: hidden !important;
+  position: relative !important;
+  background: #eae7e2 !important;
+}
+
+/* 3) Cada slide ocupa exatamente 1 “tela” do carrossel */
+.carousel-track img {
+  width: 300px !important;
+  height: 250px !important;
+  flex: 0 0 300px !important;      /* não deixa quebrar linha */
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+/* 4) Blindagem total contra estilos globais de button */
+.carousel-btn {
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  width: 34px !important;
+  height: 34px !important;
+  background: rgba(0,0,0,0.55) !important;
+  color: #fff !important;
+  font-size: 22px !important;
+  line-height: 34px !important;
+  cursor: pointer !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;
+}
+
+.carousel-btn.prev { left: 8px !important; }
+.carousel-btn.next { right: 8px !important; }
+
+/* 5) Dots (bolinhas) */
+.carousel-dots {
+  position: absolute !important;
+  bottom: 10px !important;
+  left: 0 !important;
+  right: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  z-index: 10 !important;
+}
+
+.carousel-dots button {
+  padding: 0 !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 999px !important;
+  border: 0 !important;
+  background: rgba(255,255,255,0.55) !important;
+}
+
+.carousel-dots button.active {
+  background: rgba(255,255,255,0.95) !important;
+}
+
+/* 6) Garante que botões verdes fiquem apenas no formulário */
+.formulario button {
+  background-color: #105333 !important;
+  color: #fff !important;
+}
+/* =========================
+   PARCEIROS
+   ========================= */
+
+.parceiros {
+  padding: 2.5em 1em;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.parceiros h2 {
+  margin: 0 0 24px;
+  font-size: 22px;
   color: #17303C;
 }
+
+/* Grid responsivo */
+.parceiros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* Card do parceiro */
+.parceiro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;                 /* CLS: altura fixa */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+/* Hover elegante */
+.parceiro:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+}
+
+/* Logo */
+.parceiro img {
+  max-width: 120px;
+  max-height: 50px;
+  object-fit: contain;
+  display: block;
+}
+
