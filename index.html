@@ -40,37 +40,27 @@
         <div class="card">
           <div class="carousel" data-carousel>
             <div class="carousel-track" data-track>
-              <!-- Se tiver apenas 1 foto, tudo bem (setas/dots somem automaticamente) -->
-              <img src="images/recepcao1.png" alt="Recepção 1" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
-              <!-- Se quiser voltar com as outras fotos, descomente:
-              <img src="images/recepcao2.png" alt="Recepção 2" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
-              <img src="images/recepcao3.png" alt="Recepção 3" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
-              <img src="images/recepcao4.png" alt="Recepção 4" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
-              -->
+              <img src="images/recepcao1.png" alt="Recepção" class="img-popup" onclick="abrirPopup(this)" loading="lazy">
             </div>
-
-            <button class="carousel-btn prev" type="button" data-prev aria-label="Imagem anterior">‹</button>
-            <button class="carousel-btn next" type="button" data-next aria-label="Próxima imagem">›</button>
-            <div class="carousel-dots" data-dots aria-label="Seleção de imagens"></div>
+            <button class="carousel-btn prev" type="button" data-prev>‹</button>
+            <button class="carousel-btn next" type="button" data-next>›</button>
+            <div class="carousel-dots" data-dots></div>
           </div>
-
           <h3>Recepção</h3>
           <p>Conforto e comodidade para seus convidados</p>
         </div>
 
-        <!-- Sala de Reunião -->
+        <!-- Sala -->
         <div class="card">
           <div class="carousel" data-carousel>
             <div class="carousel-track" data-track>
-              <img src="images/sala_reuniao1.jpeg" alt="Sala de Reunião 1" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
-              <img src="images/sala_reuniao2.jpeg" alt="Sala de Reunião 2" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
+              <img src="images/sala_reuniao1.jpeg" alt="Sala de Reunião" class="img-popup" onclick="abrirPopup(this)" loading="lazy">
+              <img src="images/sala_reuniao2.jpeg" alt="Sala de Reunião" class="img-popup" onclick="abrirPopup(this)" loading="lazy">
             </div>
-
-            <button class="carousel-btn prev" type="button" data-prev aria-label="Imagem anterior">‹</button>
-            <button class="carousel-btn next" type="button" data-next aria-label="Próxima imagem">›</button>
-            <div class="carousel-dots" data-dots aria-label="Seleção de imagens"></div>
+            <button class="carousel-btn prev" type="button" data-prev>‹</button>
+            <button class="carousel-btn next" type="button" data-next>›</button>
+            <div class="carousel-dots" data-dots></div>
           </div>
-
           <h3>Sala de Reunião</h3>
           <p>Espaço para até 12 pessoas com conforto e comodidade</p>
         </div>
@@ -79,19 +69,14 @@
         <div class="card">
           <div class="carousel" data-carousel>
             <div class="carousel-track" data-track>
-              <img src="images/auditorio1.jpeg" alt="Auditório 1" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
-              <img src="images/auditorio2.jpeg" alt="Auditório 2" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
-              <img src="images/auditorio3.jpeg" alt="Auditório 3" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
-              <!-- Se tiver a 4ª foto, descomente e ajuste o nome:
-              <img src="images/auditorio4.jpeg" alt="Auditório 4" class="img-popup" onclick="abrirPopup(this)" loading="lazy" decoding="async">
-              -->
+              <img src="images/auditorio1.jpeg" alt="Auditório" class="img-popup" onclick="abrirPopup(this)" loading="lazy">
+              <img src="images/auditorio2.jpeg" alt="Auditório" class="img-popup" onclick="abrirPopup(this)" loading="lazy">
+              <img src="images/auditorio3.jpeg" alt="Auditório" class="img-popup" onclick="abrirPopup(this)" loading="lazy">
             </div>
-
-            <button class="carousel-btn prev" type="button" data-prev aria-label="Imagem anterior">‹</button>
-            <button class="carousel-btn next" type="button" data-next aria-label="Próxima imagem">›</button>
-            <div class="carousel-dots" data-dots aria-label="Seleção de imagens"></div>
+            <button class="carousel-btn prev" type="button" data-prev>‹</button>
+            <button class="carousel-btn next" type="button" data-next>›</button>
+            <div class="carousel-dots" data-dots></div>
           </div>
-
           <h3>Auditório Bayhub</h3>
           <p>Até 100 pessoas, acústica, iluminação e telão</p>
         </div>
@@ -100,7 +85,6 @@
 
     <section class="formulario">
       <h2>Reservar um Espaço</h2>
-
       <form action="https://formsubmit.co/contato@bayhub.com.br" method="POST">
         <input type="text" name="nome" placeholder="Nome completo" required>
         <input type="email" name="email" placeholder="E-mail" required>
@@ -120,39 +104,12 @@
 
         <input type="date" name="data" required>
 
-        <input type="text" name="_honey" style="display:none">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://www.bayhub.com.br/obrigado.html">
 
         <button type="submit">Solicitar Reserva</button>
       </form>
     </section>
-    <section class="parceiros">
-  <h2>Nossos Parceiros</h2>
-
-  <div class="parceiros-grid">
-    <!-- Parceiro 1 -->
-    <a href="https://fazendabahia.com/" target="_blank" rel="noopener" class="parceiro">
-      <img src="images/logo-fazenda-bahia_novo-AVLzxjWn3zHpp9v4.avif" alt="Parceiro 1">
-    </a>
-
-    <!-- Parceiro 2 
-    <a href="https://www.parceiro2.com.br" target="_blank" rel="noopener" class="parceiro">
-      <img src="images/parceiro2.png" alt="Parceiro 2">
-    </a>  -->
-
-    <!-- Parceiro 3 
-    <a href="https://www.parceiro3.com.br" target="_blank" rel="noopener" class="parceiro">
-      <img src="images/parceiro3.png" alt="Parceiro 3">
-    </a> -->
-
-    <!-- Parceiro 4 
-    <a href="https://www.parceiro4.com.br" target="_blank" rel="noopener" class="parceiro">
-      <img src="images/parceiro4.png" alt="Parceiro 4">
-    </a>-->
-  </div>
-</section>
-
 
     <section class="sobre-contato">
       <div>
@@ -162,99 +119,63 @@
       <div>
         <h2>Entre em contato</h2>
         <p>(19)99800-4060 – bayhub@bayhub.com.br<br>
-        Rua Comendador João Lucas, 101 - salas 6/8 - Distrito Industrial - Vinhedo - São Paulo</p>
+        Rua Comendador João Lucas, 101 - Vinhedo - SP</p>
       </div>
     </section>
   </main>
 
-  <!-- Popup de Imagem -->
+  <!-- ===== RODAPÉ COM REDES SOCIAIS ===== -->
+  <footer class="rodape">
+    <p>© 2026 Bayhub. Todos os direitos reservados.</p>
+
+    <div class="redes-sociais">
+      <a href="https://www.instagram.com/bayhuboficial/" target="_blank" rel="noopener" aria-label="Instagram Bayhub">
+        Instagram: @bayhuboficial
+      </a>
+    </div>
+  </footer>
+
+  <!-- Popup -->
   <div id="popup" class="popup" onclick="fecharPopup()">
-    <span class="close" aria-label="Fechar popup">&times;</span>
+    <span class="close">&times;</span>
     <img class="popup-conteudo" id="popup-img" alt="Imagem ampliada">
   </div>
 
   <script>
-    // ===== POPUP (Zoom) =====
     function abrirPopup(img) {
-      const popup = document.getElementById("popup");
-      const popupImg = document.getElementById("popup-img");
-      popup.style.display = "flex";
-      popupImg.src = img.src;
+      document.getElementById("popup").style.display = "flex";
+      document.getElementById("popup-img").src = img.src;
     }
     function fecharPopup() {
       document.getElementById("popup").style.display = "none";
     }
 
-    // ===== CARROSSEIS (um por card) =====
     function initCarousel(root) {
       const track = root.querySelector("[data-track]");
       const slides = Array.from(track.querySelectorAll("img"));
-      const btnPrev = root.querySelector("[data-prev]");
-      const btnNext = root.querySelector("[data-next]");
+      const prev = root.querySelector("[data-prev]");
+      const next = root.querySelector("[data-next]");
       const dotsWrap = root.querySelector("[data-dots]");
-
-      if (!track || slides.length === 0) return;
-
       let index = 0;
 
-      // limpar dots (evita duplicar se script rodar mais de 1 vez)
       dotsWrap.innerHTML = "";
-
-      // criar dots
       const dots = slides.map((_, i) => {
         const b = document.createElement("button");
-        b.type = "button";
-        b.setAttribute("aria-label", `Ir para imagem ${i + 1}`);
         b.addEventListener("click", () => goTo(i));
         dotsWrap.appendChild(b);
         return b;
       });
 
-      function update() {
-        track.style.transform = `translateX(-${index * 100}%)`;
-        dots.forEach((d, i) => d.classList.toggle("active", i === index));
-
-        const hasMany = slides.length > 1;
-        btnPrev.style.display = hasMany ? "block" : "none";
-        btnNext.style.display = hasMany ? "block" : "none";
-        dotsWrap.style.display = hasMany ? "flex" : "none";
-      }
-
       function goTo(i) {
         index = (i + slides.length) % slides.length;
-        update();
+        track.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((d, j) => d.classList.toggle("active", j === index));
       }
 
-      btnPrev.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        goTo(index - 1);
-      });
+      prev.onclick = () => goTo(index - 1);
+      next.onclick = () => goTo(index + 1);
 
-      btnNext.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        goTo(index + 1);
-      });
-
-      // swipe (mobile)
-      let startX = null;
-      root.addEventListener("touchstart", (e) => {
-        startX = e.touches[0].clientX;
-      }, { passive: true });
-
-      root.addEventListener("touchend", (e) => {
-        if (startX === null) return;
-        const endX = e.changedTouches[0].clientX;
-        const diff = endX - startX;
-        startX = null;
-
-        if (Math.abs(diff) > 40) {
-          diff > 0 ? goTo(index - 1) : goTo(index + 1);
-        }
-      }, { passive: true });
-
-      update();
+      goTo(0);
     }
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -263,4 +184,3 @@
   </script>
 </body>
 </html>
-
